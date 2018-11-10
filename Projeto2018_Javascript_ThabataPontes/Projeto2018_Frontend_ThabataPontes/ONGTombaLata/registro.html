@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Registro de animais</title>
+        <link rel="icon" href="tombalataTransparente.png">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/registro.css">
+    </head>
+    <body>
+        <aside>
+                    <ul>
+                        <li class="animais"><a href="galeria.html">Animais resgatados</a></li>
+                        <li class="registro"><a href="registro.html">Registro de animais</a></li>
+                        <li class="home"><a href="ONGTombaLata.html">Home</a></li>
+                    </ul>
+                    <img class="logo" src="tombalataTransparente.png">
+        </aside>
+        <main>
+            <div class="formulario">
+                <ul id="mensagens-erro"></ul>
+                <form id="form-adiciona">
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <label for="nome">Nome: </label>
+                        <input id="nome" name="nome" placeholder="Seu nome aqui" required autofocus>
+                        <label for="telefone">Telefone:</label>
+                        <input id="telefone" name="telefone" placeholder="(11)970372050" required>
+                        <label for="email">E-mail:</label>
+                        <input id="email" name="email" placeholder="seu@email.com" type="email" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Dados do animal</legend>
+                        <label for="endereco">Endereço:</label>
+                        <input id="endereco" name="endereco" placeholder="Endereço do animal aqui" required>
+                        <label id="especie">Espécie:</label>
+                        <select id="tipo">
+                            <option name="especie" id="gato" value="gato">Gato</option>
+                            <option name="especie" id="cachorro" value="cachorro">Cachorro</option>
+                            <option name="especie" id="escolher" value="escolher">Escolher</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="data">Data e hora em que o animal foi avistado:</label>
+                        <input type="date" id="data">
+                        <input type="time" id="tempo">
+                    </fieldset>
+                    <fieldset>
+                        <label for="nomeanimal">Nome do animal: </label>
+                        <input id="nomeanimal" name="nomeanimal" placeholder="Nome do animal aqui">
+                        <label for="img">Imagens do animal:</label>
+                        <input type="file" name="imagens" id="file">
+                    </fieldset>
+                    <fieldset>
+                        <label for="caracteristicas" id="textcara">Características do animal:</label>
+                    </fieldset>
+                    <fieldset class="quadrado">
+                        <textarea id="caracteristicas" name="caracteristicas" cols="70" rows="5" required></textarea>
+                    </fieldset>
+                    <button type="submit" id="botao">Enviar registro</button>    
+                </form>
+            </div>
+            <h1 id="titulo">Animais registrados</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do animal</th>
+                        <th>Cachorro/Gato</th>
+                        <th>Local</th>
+                        <th>Características</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-resgatados">
+                    <tr class="resgatados" id="Bob">
+                        <td class="info-nome">Bob</td>
+                        <td class="info-tipo">Cachorro</td>
+                        <td class="info-local">Xavier Pinheiro</td>
+                        <td class="info-caracteristicas">Dócil, companheiro</td>
+                    </tr>  
+                    <tr class="resgatados" id="Douglas">
+                        <td class="info-nome">Douglas</td>
+                        <td class="info-tipo">Gato</td>
+                        <td class="info-local">Fernão do Porto</td>
+                        <td class="info-caracteristicas">Dócil, companheiro, pequeno porte, amigo, protetor</td>
+                    </tr>
+                    <tr class="resgatados" id="Lara">
+                        <td class="info-nome">Lara</td>
+                        <td class="info-tipo">Gata</td>
+                        <td class="info-local">Fernão do Porto</td>
+                        <td class="info-caracteristicas">companheira, grande porte, branca</td>
+                    </tr>
+                    <tr class="resgatados" id="Meg">
+                        <td class="info-nome">Meg</td>
+                        <td class="info-tipo">Cadela</td>
+                        <td class="info-local">Teodoro Sampaio</td>
+                        <td class="info-caracteristicas">companheira, grande porte, branca</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </main>
+        <footer class="rodape-pagina">
+            <p class="telefone">Tel:(11) 970372050</p>
+            <p class="endereco">Endereço: Rua Fernão do Porto, 39, Vila Progredior</p>
+            <p class="email">E-mail: thabata.risso@usp.br </p>
+            <a href="http://facebook.com/ongtombalatas"><img class="face" src="1491579586-yumminkysocialmedia21_83091.png" alt="Facebook"></a>
+            <a href="http://twitter.com/ongtombalatas"><img class="twitter" src="twitter.png" alt="Twitter"></a>
+            <img class="logo" src="tombalataTransparente.png">
+        </footer>
+        <script src="js/adicionar.js"></script>
+        <script src="js/colore.js"></script>
+        <script src="js/validar.js"></script>
+        <script src="js/preencher.js"></script>
+    </body>
+</html>
