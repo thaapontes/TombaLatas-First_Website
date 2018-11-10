@@ -1,0 +1,91 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Registro de animais</title>
+        <link rel="stylesheet" href="{% static "styles/reset.css" %}">
+        <link rel="stylesheet" href="{% static "styles/registro.css" %}">
+        <link rel="icon" href="{% static "img/tombalataTransparente.png" %}">
+    </head>
+    <body>
+        <aside>
+                    <ul>
+                        <li class="animais"><a href="galeria.html">Animais resgatados</a></li>
+                        <li class="registro"><a href="registro.html">Registro de animais</a></li>
+                        <li class="home"><a href="ONGTombaLata.html">Home</a></li>
+                    </ul>
+                    <img class="logo" src="{% static "img/tombalataTransparente.png" %}">
+        </aside>
+        <main>
+            <div class="formulario">
+                <ul id="mensagens-erro"></ul>
+                <form id="form-adiciona" role="form" method="post" enctype="multipart/form-data"
+                {% csrf_token %}
+                    <fieldset>
+                        <legend>Dados do animal</legend>
+                        <label for="endereco">Endereço:</label>
+                        <input id="endereco" name="endereco" placeholder="Endereço do animal aqui" required>
+                        <label id="especie">Espécie:</label>
+                        <select id="tipo">
+                            <option name="especie" id="gato" value="gato">Gato</option>
+                            <option name="especie" id="cachorro" value="cachorro">Cachorro</option>
+                            <option name="especie" id="escolher" value="escolher">Escolher</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="data">Data e hora em que o animal foi avistado:</label>
+                        <input type="date" id="data">
+                        <input type="time" id="tempo">
+                    </fieldset>
+                    <fieldset>
+                        <label for="nomeanimal">Nome do animal: </label>
+                        <input id="nomeanimal" name="nomeanimal" placeholder="Nome do animal aqui">
+                        <label for="img">Imagens do animal:</label>
+                        <input type="file" name="imagens" id="file">
+                    </fieldset>
+                    <fieldset>
+                        <label for="caracteristicas" id="textcara">Características do animal:</label>
+                    </fieldset>
+                    <fieldset class="quadrado">
+                        <textarea id="caracteristicas" name="caracteristicas" cols="70" rows="5" required></textarea>
+                    </fieldset>
+                    <button type="submit" id="botao">Enviar registro</button>    
+                </form>
+            </div>
+            <h1 id="titulo">Animais registrados</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do animal</th>
+                        <th>Cachorro/Gato</th>
+                        <th>Local</th>
+                        <th>Características</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-resgatados">
+                    {% for perfil in perfis %}
+                    <tr class="resgatados" id="Bob">
+                        <td class="info-nome">{{perfil.nome}}</td>
+                        <td class="info-tipo">{{perfil.tipo}}</td>
+                        <td class="info-local">{{perfil.endereco}}</td>
+                        <td class="info-caracteristicas">{{perfil.caracteristicas}}</td>
+                        <a href="{% url 'convidar' perfil.id %}"></a>
+                    </tr>  
+                   {% endfor %}
+                   </tbody>
+            </table>
+        </main>
+        <footer class="rodape-pagina">
+            <p class="telefone">Tel:(11) 970372050</p>
+            <p class="endereco">Endereço: Rua Fernão do Porto, 39, Vila Progredior</p>
+            <p class="email">E-mail: thabata.risso@usp.br </p>
+            <a href="http://facebook.com/ongtombalatas"><img class="face" src="{%  static "img/1491579586-yumminkysocialmedia21_83091.png" alt="Facebook" %}"></a>
+            <a href="http://twitter.com/ongtombalatas"><img class="twitter" src="{% static "img/twitter.png" alt="Twitter"%}"></a>
+            <img class="logo" src="{% static "img/tombalataTransparente.png" %}">
+        </footer>
+        <script src="{% static "scripts/js/adicionar.js" %}"></script>
+        <script src="{% static "scripts/js/colore.js" %}"></script>
+        <script src="{% static "scripts/js/validar.js" %}"></script>
+    </body>
+</html>

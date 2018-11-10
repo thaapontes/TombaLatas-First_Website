@@ -1,0 +1,94 @@
+aside{
+    color: rgb(255,255,255);
+    margin:0;
+    font-family: "Open Sans Condensed", sans-serif;
+    position: relative;
+    height:150px;
+    background-image: linear-gradient(to right,rgb(255,255,255)0%,rgb(0,40,150));
+}
+aside .logo{
+    width:125px;
+    position:absolute;
+    left:5%;
+}
+aside li{
+    display: inline-block;
+    font-size:25px;
+}
+.home{
+    position:absolute;
+    left:35%;
+    top:35%;
+}
+.animais{
+    position:absolute;
+    left:45%;
+    top:35%;
+}
+.registro{
+    position:absolute;
+    left:65%;
+    top:35%;
+}
+aside a{
+    color:inherit;
+}
+main{
+    position:absolute;
+    width:55%;
+    left:22%;
+    top:25%;
+    padding:20px;
+}
+
+.rodape-pagina{
+    background-color:rgb(0,40,150);
+	color: #F2FFFC;
+	clear:both;
+	position: absolute;
+	bottom: -25%;
+	width: 100%;
+	height:15%;
+}
+footer .logo{
+	position:absolute;
+	left:10%;
+	height:90px;
+	width:80px;
+}
+.rodape-pagina p{
+	color:rgb(255,255,255); 
+	font-size:15px;	
+	position:relative;
+}
+.telefone, .endereco, .email{
+	position:absolute;
+	left:35%;
+	padding:7px;
+}
+fieldset{
+	padding:30px;
+	width:1000%;
+}
+
+form{
+	border: 10px solid rgb(0,40,150);
+	padding:10px;
+	width:100%;
+}
+legend{
+	color:rgb(0,40,150);
+	font-size:20px;
+}
+.face{
+	position:absolute;
+	left:70%;
+	top:33%;
+	width:2.6%;
+}
+.twitter{
+	position:absolute;
+	left:75%;
+	top:30%;
+	width:3%;
+}

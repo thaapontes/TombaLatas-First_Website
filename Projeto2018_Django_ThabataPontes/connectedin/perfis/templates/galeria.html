@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Animais resgatados</title>
+        <link rel="stylesheet" href="{% static "styles/reset.css" %}">
+        <link rel="stylesheet" href="{% static "styles/galeria.css" %}">
+        <link rel="icon" href="{% static "img/tombalataTransparente.png" %}">
+    </head>
+    <body>
+        <aside>
+            <ul>
+                <li class="animais"><a href="galeria.html">Animais resgatados</a></li>
+                <li class="registro"><a href="registro.html">Registro de animais</a></li>
+                <li class="home"><a href="ONGTombaLata.html">Home</a></li>
+            </ul>
+            <img class="logo" src="{% static "img/tombalataTransparente.png" %}">
+        </aside>
+            <main>
+                <h1>História de alguns dos animais resgatados por nós:</h1>
+                <div class="story1">
+                    <img class="img1" src="{% static "img/caesresgatados.png" %}">
+                    <h2>Irmãos Santos</h2>
+                    <p>&nbsp &nbsp &nbsp &nbsp Os irmãos foram encontrados em uma caixa de sapato em frente a loja em que um dos nossos colaboradores trabalha, em 2016. Eles estavam em condições de risco, sem alimentação ou qualquer suporte, mas isso foi suprido pelos nossos cuidados após os levarmos para a ONG. Os irmãos receberam o chamado de "Santos" pois foram adotados por uma família com o este sobrenome. A família adotou todos, que hoje vivem em paz e tranquilidade no sítio da família Santos. </p>
+                </div>
+                <div class="story2">
+                    <img class="img2" src="{% static "img/gatoresgatado.png" %}">
+                    <h2>Lara</h2>
+                    <p> &nbsp &nbsp &nbsp &nbsp Lara foi encontrada por um gari na rua, ainda filhote, numa lata de lixo. Isso aconteceu em 19/09/2012, quando ela foi levada para a ONG. Quando ela chegou em nossas mãos estava com vários problemas de saúde, fome, dentre outras coisas. Entretanto ela saiu da ONG, adotada por um casal apaixonado por gatos, de maneira totalmente diferente da qual ela chegou, após uma série de tratamentos e cuidados feitos por nós. Lara é uma gata extremamente dócil e brincalhona e hoje vive feliz!</p>           </main>
+        <footer class="rodape-pagina">
+            <img class="logo" src="{% static "img/tombalataTransparente.png" %}">
+            <p class="telefone">Tel:(11) 970372050</p>
+            <p class="endereco">Endereço: Rua Fernão do Porto, 39, Vila Progredior</p>
+            <p class="email">E-mail: thabata.risso@usp.br </p>
+            <a href="http://facebook.com/ongtombalatas"><img class="face" src="{% static "img/1491579586-yumminkysocialmedia21_83091.png" alt="Facebook" %}"></a>
+            <a href="http://twitter.com/ongtombalatas"><img class="twitter" src="{% static "img/twitter.png" alt="Twitter" %}"></a>
+        </footer>
+    </body>
+</html>

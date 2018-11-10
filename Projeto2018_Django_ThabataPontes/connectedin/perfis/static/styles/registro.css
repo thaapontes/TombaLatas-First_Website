@@ -1,0 +1,169 @@
+aside{
+    color: rgb(255,255,255);
+    margin:0;
+    font-size:110%;
+    font-weight:bold;
+    font-family: "Open Sans Condensed", sans-serif;
+    height:90%;
+    background-image: linear-gradient(to right,rgb(255,255,255)-10%,rgb(0,40,150));
+}
+aside .logo{
+    width:9%;
+    position:relative;
+    left:7%;
+}
+aside li{
+	float:right;
+	position:relative;
+	left:-8%;
+	margin:4%;
+}
+:link{
+	text-decoration:none;
+}
+.home:hover, .registro:hover, .animais:hover{
+	background-color:rgb(255,255,255);
+	padding:1%;
+	color:rgb(0,40,150);
+	border-radius:20%;
+}
+aside a{
+    color:inherit;
+}
+main{
+    position:relative;
+    width:55%;
+    left:22%;
+    top:25%;
+    padding:2%;
+}
+
+.rodape-pagina{
+    background-color:rgb(0,40,150);
+	color: #F2FFFC;
+	width: 100%;
+	height:15%;
+}
+footer .logo{
+    position:relative;
+	left:10%;
+	height:8%;
+	width:6%;
+}
+.rodape-pagina p{
+	float:right;
+	color:rgb(255,255,255); 
+	font-size:90%;
+	margin:1%;
+	position:relative;
+	left:-10%;
+}
+.face{
+	position:relative;
+	left:55%;
+	width:2.6%;
+}
+.twitter{
+	position:relative;
+	left:60%;
+	width:3%;
+}
+fieldset{
+	padding:3%;
+	width:100%;
+}
+
+form{
+	border: 10px solid rgb(0,40,150);
+	padding:3%;
+	width:100%;
+	font-size:110%;
+}
+legend{
+	color:rgb(0,40,150);
+	font-size:160%;
+}
+#botao{
+	height:45px;
+	width:160px;
+	position:relative;
+	left:30%;
+	background-color:rgb(0,40,150);
+	font-size:medium;
+	font-weight:bold;
+}
+#nome, #email{
+	width:160px;
+	height:20px;
+	margin-left:5px;
+	margin-right:10px;
+}
+#telefone{
+	width:110px;
+	height:20px;
+	margin-left:5px;
+	margin-right:10px;
+}
+#especie{
+	margin-left:30px;
+}
+#endereco{
+	width:280px;
+	height:20px;
+	margin-left:5px;
+}
+#data, #tempo{
+	height:25px;
+	margin-right:10px;
+}
+#nomeanimal{
+	height:20px;
+	width:130px;
+	margin-left:5px;
+	margin-right:10px;
+}
+#caracteristicas{
+	width:400px;
+	margin-bottom: 5px;
+	height:70px;
+}
+table{
+	width: 100%;
+	margin-top:30px;
+	margin-bottom : 30px;
+    table-layout: fixed;
+    position:relative;
+    left:5%;
+
+}
+
+td, th {
+	padding: .7em;
+	margin: 0;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+th{
+	font-weight: bold;
+	background-color: #EEE;
+}
+
+.erro{
+	border-color: red;
+}
+
+#mensagens-erro{
+	color: red;
+	font-size: 20px;
+}
+#titulo{
+	font-size: 120%;
+	text-align:center;
+	margin-top:15px;
+	color:rgb(0,40,150);
+	font-weight:bold;
+}
+.clicado{
+	background-color: powderblue;
+}
