@@ -24,4 +24,4 @@ Tomba Latas is an imaginary non-governmental organization (NGO) dedicated to fac
 6. find /Users/thabata.pontes/TombaLatas-First_Website  -name "*.pyc" -exec rm -f {} \;
 5. python -m compileall .
 6. python manage.py runserver
-6. Access the website through your preferred web browser.
+7. Access the website through your preferred web browser http://localhost:8000/
