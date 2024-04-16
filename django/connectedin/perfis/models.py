@@ -7,7 +7,7 @@ class PerfilCao(models.Model):
     tipo = models.CharField(max_length=255, default = 'SOME STRING')
     endereco=models.CharField(max_length = 50, null=False)
     caracteristicas= models.CharField(max_length = 200, null = False)
-    usuario = models.OneToOneField(User, related_name="perfil")
+    usuario = models.OneToOneField(User, related_name="perfil", on_delete=models.CASCADE)
 
     @property
     def email(self):
@@ -18,6 +18,6 @@ class PerfilCao(models.Model):
         convite.save()
 
 class Convite(models.Model):
-    solicitante = models.ForeignKey(PerfilCao, related_name='convites_feitos')
-    convidado = models.ForeignKey(PerfilCao, related_name='convites_recebidos')
+    solicitante = models.ForeignKey(PerfilCao, related_name='convites_feitos', on_delete=models.CASCADE)
+    convidado = models.ForeignKey(PerfilCao, related_name='convites_recebidos', on_delete=models.CASCADE)
     

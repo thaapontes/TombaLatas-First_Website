@@ -17,6 +17,11 @@ Tomba Latas is an imaginary non-governmental organization (NGO) dedicated to fac
 **How to Use:**
 
 1. Clone this repository to your local machine.
-2. Install the necessary dependencies.
-3. Launch the Django development server.
-4. Access the website through your preferred web browser.
+2. python3 -m venv venv
+3. source venv/bin/activate
+4. pip install django
+5. cd django/connectedin
+6. find /Users/thabata.pontes/TombaLatas-First_Website  -name "*.pyc" -exec rm -f {} \;
+5. python -m compileall .
+6. python manage.py runserver
+6. Access the website through your preferred web browser.
